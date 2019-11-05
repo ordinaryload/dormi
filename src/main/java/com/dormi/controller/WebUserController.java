@@ -104,14 +104,14 @@ public class WebUserController {
     @RequestMapping("/getUserInfo")
     @ResponseBody
     public String getUserInfo() throws JsonProcessingException {
-Administrators administrators = new Administrators();
-administrators.setAdminBuilding("19");
-administrators.setAdminCard("9527");
-administrators.setAdminName("许你长欢");
-administrators.setAdminPhone("1995202020");
+        Administrators administrators = new Administrators();
+        administrators.setAdminBuilding("19");
+        administrators.setAdminCard("9527");
+        administrators.setAdminName("许你长欢");
+        administrators.setAdminPhone("1995202020");
         Map<String,Object> returnMap = new HashMap<String,Object>();
 
-returnMap.put("administrators",administrators);
-return objectMapper.writeValueAsString(administrators);
+        returnMap.put("administrators",administrators);
+        return objectMapper.writeValueAsString(administrators);
     }
 }
