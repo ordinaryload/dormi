@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: hasee
+  Date: 2019/11/7
+  Time: 13:24
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="utf-8">
@@ -11,8 +18,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" href="./css/x-admin.css" media="all">
-    <link rel="stylesheet" href="./css/personinfo.css" media="all">
+    <link rel="stylesheet" href="/css/x-admin.css" media="all">
+    <link rel="stylesheet" href="/css/personinfo.css" media="all">
 </head>
 <body>
 <div class="x-body">
@@ -29,7 +36,7 @@
                     姓名：
                 </td>
                 <td class="tr_content">
-                    <input class="tb_m" id="txt_name" name="RealName" type="text" value="" />
+                    <input class="tb_m" id="txt_name" name="RealName" type="text" value="${administrators.adminName}" />
                 </td>
 
             </tr>
@@ -38,38 +45,7 @@
                     工号：
                 </td>
                 <td class="tr_content">
-                    <input class="tb_m" id="txt_no" name="Number" type="text" value="" />
-                </td>
-
-            </tr>
-
-            <tr>
-                <td class="tr_title">
-                    性别：
-                </td>
-                <td class="tr_content">
-                    <input class="radio_block" id="Gender" name="Gender" type="radio" value="1" />
-                    <label for="ctl00_cphMain_radio_gender_0">男</label>
-                    <input class="radio_block" id="Gender" name="Gender" type="radio" value="0" />
-                    <label for="ctl00_cphMain_radio_gender_1">女</label>
-                </td>
-            </tr>
-
-            <tr>
-                <td class="tr_title">
-                    职位：
-                </td>
-                <td class="tr_content">
-                    <input class="tb_m" id="txt_position" name="Position" type="text" value="" />
-                </td>
-
-            </tr>
-            <tr>
-                <td class="tr_title">
-                    单位：
-                </td>
-                <td class="tr_content">
-                    <input class="tb_m" id="txt_company" name="Company" type="text" value="" />
+                    <input class="tb_m" id="txt_no" name="Number" type="text" value="${administrators.adminCard}" />
                 </td>
 
             </tr>
@@ -78,7 +54,7 @@
                     宿舍楼：
                 </td>
                 <td class="tr_content">
-                    <input class="tb_m" id="txt_louno" name="Louno" type="text" value="" />
+                    <input class="tb_m" id="txt_louno" name="Louno" type="text" value="${administrators.adminBuilding}" />
                 </td>
 
             </tr>
@@ -87,16 +63,7 @@
                     手机号：
                 </td>
                 <td class="tr_content">
-                    <input class="tb_m" id="txt_phone" name="Phone" type="text" value="" />
-                </td>
-
-            </tr>
-            <tr>
-                <td class="tr_title">
-                    邮箱：
-                </td>
-                <td class="tr_content">
-                    <input class="tb_m" id="txt_email" name="Email" type="text" value="" />
+                    <input class="tb_m" id="txt_phone" name="Phone" type="text" value="${administrators.adminPhone}" />
                 </td>
 
             </tr>
@@ -159,8 +126,8 @@
 
 
 </script>
-<script src="./lib/layui/layui.js" charset="utf-8"></script>
-<script src="./js/x-admin.js"></script>
+<script src="/lib/layui/layui.js" charset="utf-8"></script>
+<script src="/js/x-admin.js"></script>
 <script>
     var _hmt = _hmt || [];
     (function() {

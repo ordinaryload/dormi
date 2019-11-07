@@ -98,8 +98,6 @@
         </tr>
         </thead>
         <tbody id="x-link">
-        <td>
-        </td>
         </tbody>
     </table>
     <div id="page"></div>

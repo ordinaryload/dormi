@@ -84,8 +84,8 @@ public class WebUserController {
      * @param session
      * @return
      */
-    @RequestMapping(value = "/getInfo",method = RequestMethod.GET,produces = "application/json;charset=utf-8")
-    @ResponseBody
+    @RequestMapping(value = "/getInfo",method = RequestMethod.GET)
+//    @ResponseBody
     public String getPersonalInfo(HttpSession session) throws JsonProcessingException {
         Administrators administrators = (Administrators) session.getAttribute("loginAdministrators");
         Map<String,Object> returnMap = new HashMap<String,Object>();
@@ -94,9 +94,11 @@ public class WebUserController {
         System.out.println(administrators.getAdminPassword());
         System.out.println(administrators.getAdminBuilding());
         System.out.println(administrators.getAdminName());
+
+        session.setAttribute("administrators",administrators);
         returnMap.put("state",DormiConstants.SUCCESS);
         returnMap.put("data",administrators);
-        return objectMapper.writeValueAsString(returnMap);
+        return "userinfo";
 
     }
 
